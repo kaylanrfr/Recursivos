@@ -1,0 +1,89 @@
+Professor eu fiz o programa em C no site: "https://repl.it/languages/c" e funcionou perfeitamente, meus colegas tentaram rodar e não conseguiram em outros compiladores.
+Nesse programa a recursividade e dividir o programa em pequenas partes, fez com que a quantidade de recursão aumentasse de forma elevada, levando em poucos casos ao erro na contagem.
+
+
+#include <stdio.h>
+
+int qtd = 1;
+
+
+int cont(val){
+  qtd = qtd + val;
+  return 0;
+}
+int fib(n,qtd){
+    if (n <= 1 ){
+  
+        return n;
+        
+    }
+    else{
+        int val = 2;
+        cont(val);
+        return  (fib(n-1) + fib(n-2));
+    }
+    
+}
+int main()
+{
+
+    int n = 0;
+    while(n <= 100){
+    printf(" O valor de fibonacci %i é: %i, e a quantidade de recursões foi: %i\n", n+1, fib(n, qtd), qtd);
+    n+=1;
+    qtd = 1;
+    }
+    
+    return 0;
+}
+
+
+
+
+
+ O valor de fibonacci 1 é: 0, e a quantidade de recursões foi: 1
+ O valor de fibonacci 2 é: 1, e a quantidade de recursões foi: 1
+ O valor de fibonacci 3 é: 1, e a quantidade de recursões foi: 3
+ O valor de fibonacci 4 é: 2, e a quantidade de recursões foi: 5
+ O valor de fibonacci 5 é: 3, e a quantidade de recursões foi: 9
+ O valor de fibonacci 6 é: 5, e a quantidade de recursões foi: 15
+ O valor de fibonacci 7 é: 8, e a quantidade de recursões foi: 25
+ O valor de fibonacci 8 é: 13, e a quantidade de recursões foi: 41
+ O valor de fibonacci 9 é: 21, e a quantidade de recursões foi: 67
+ O valor de fibonacci 10 é: 34, e a quantidade de recursões foi: 109
+ O valor de fibonacci 11 é: 55, e a quantidade de recursões foi: 177
+ O valor de fibonacci 12 é: 89, e a quantidade de recursões foi: 287
+ O valor de fibonacci 13 é: 144, e a quantidade de recursões foi: 465
+ O valor de fibonacci 14 é: 233, e a quantidade de recursões foi: 753
+ O valor de fibonacci 15 é: 377, e a quantidade de recursões foi: 1219
+ O valor de fibonacci 16 é: 610, e a quantidade de recursões foi: 1973
+ O valor de fibonacci 17 é: 987, e a quantidade de recursões foi: 3193
+ O valor de fibonacci 18 é: 1597, e a quantidade de recursões foi: 5167
+ O valor de fibonacci 19 é: 2584, e a quantidade de recursões foi: 8361
+ O valor de fibonacci 20 é: 4181, e a quantidade de recursões foi: 13529
+ O valor de fibonacci 21 é: 6765, e a quantidade de recursões foi: 21891
+ O valor de fibonacci 22 é: 10946, e a quantidade de recursões foi: 35421
+ O valor de fibonacci 23 é: 17711, e a quantidade de recursões foi: 57313
+ O valor de fibonacci 24 é: 28657, e a quantidade de recursões foi: 92735
+ O valor de fibonacci 25 é: 46368, e a quantidade de recursões foi: 150049
+ O valor de fibonacci 26 é: 75025, e a quantidade de recursões foi: 242785
+ O valor de fibonacci 27 é: 121393, e a quantidade de recursões foi: 392835
+ O valor de fibonacci 28 é: 196418, e a quantidade de recursões foi: 635621
+ O valor de fibonacci 29 é: 317811, e a quantidade de recursões foi: 1028457
+ O valor de fibonacci 30 é: 514229, e a quantidade de recursões foi: 1664079
+ O valor de fibonacci 31 é: 832040, e a quantidade de recursões foi: 2692537
+ O valor de fibonacci 32 é: 1346269, e a quantidade de recursões foi: 4356617
+ O valor de fibonacci 33 é: 2178309, e a quantidade de recursões foi: 7049155
+ O valor de fibonacci 34 é: 3524578, e a quantidade de recursões foi: 11405773
+ O valor de fibonacci 35 é: 5702887, e a quantidade de recursões foi: 18454929
+ O valor de fibonacci 36 é: 9227465, e a quantidade de recursões foi: 29860703
+ O valor de fibonacci 37 é: 14930352, e a quantidade de recursões foi: 48315633
+ O valor de fibonacci 38 é: 24157817, e a quantidade de recursões foi: 78176337
+ O valor de fibonacci 39 é: 39088169, e a quantidade de recursões foi: 126491971
+ O valor de fibonacci 40 é: 63245986, e a quantidade de recursões foi: 204668309
+ O valor de fibonacci 41 é: 102334155, e a quantidade de recursões foi: 331160281
+ O valor de fibonacci 42 é: 165580141, e a quantidade de recursões foi: 535828591
+ O valor de fibonacci 43 é: 267914296, e a quantidade de recursões foi: 866988873
+ O valor de fibonacci 44 é: 433494437, e a quantidade de recursões foi: 1402817465
+ O valor de fibonacci 45 é: 701408733, e a quantidade de recursões foi: -2025160957
+ O valor de fibonacci 46 é: 1134903170, e a quantidade de recursões foi: -622343491

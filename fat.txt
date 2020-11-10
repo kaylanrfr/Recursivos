@@ -1,0 +1,53 @@
+Entendi que a recursão funciona muito bem por quebrar o problema em pequenas partes para facilitar a resolução dele, entretanto, torna cada vez mais pesado par memória pelo fato de ser fazer a mesma chamada indefinidamente como pode ser visto a partir de poucos inputs no caso fatorial, gerando resultados duvudosos 
+
+
+#include <stdio.h>
+
+
+int fat(n, qtd){
+    if (n <= 0 ){
+        printf(" A quantidade de recursões foi: %i\n", qtd);
+        return 1;
+        
+    }
+    else{
+        return n * fat(n-1, qtd+=1);
+    }
+}
+int main()
+{
+    int qtd = 0;
+    int n = 0;
+    printf(" Entre com o valor de n: ");
+    scanf("%i", &n);
+    printf(" O valor do fatorial é: %i", fat(n, qtd));
+    return 0;
+}
+
+fat de 1 = 1, quantidade de recursões = 1.
+
+fat de 2 = 2, quantidade de recursões = 2.
+
+fat de 3 = 6, quantidade de recursões = 3.
+
+fat de 4 = 24, quantidade de recursões = 4.
+
+fat de 5 = 129, quantidade de recurções = 5.
+
+fat de 10 = 3628800, quantidade de recursões = 10.
+
+fat de 11 = 39916800, quantidade de recursões = 11.
+
+fat de 12 = 479001600, quantidade de recursões = 12.
+
+fat de 13 = 1932053504, quantidade de recursões = 13. a partir de 13 começa a dar problema nos valores!!
+
+fat de 14 = 1278945280, quantidade de recursões = 14.
+
+fat de 15 = 2004310016, quantidade de recursões = 15.
+
+fat de 20 = -2102132736, quantidade de recursões = 20.
+
+fat de 50 = 0, quantidade de recursões = 50.
+
+fat de 100 = 0, quantidade de recursões = 100.
